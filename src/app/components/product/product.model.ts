@@ -1,5 +1,5 @@
 export interface Product {
-    Id?: number,
-    Nome: string,
-    Preco: number | null
+    id?: number,
+    nome: string,
+    preco: string
 }
