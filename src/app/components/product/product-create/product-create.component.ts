@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { Product } from '../product.model';
 import { ProductService } from '../product.service';
@@ -13,14 +14,17 @@ export class ProductCreateComponent implements OnInit {
   produto: Product ={
     nome: "",
     preco: ""
-  }
-  constructor(private productService: ProductService,
+  };
+
+  constructor(
+    private productService: ProductService,
     private router: Router) { }
 
   ngOnInit(): void {
+
   }
 
-  createProduct(): void {
+  createProduct(): void {    
     this.productService.create(this.produto).subscribe(() => {
     this.productService.showMessage('Produto criado!')
     this.router.navigate(['/products'])
@@ -30,5 +34,5 @@ export class ProductCreateComponent implements OnInit {
   cancel(): void {
     this.router.navigate(['/products'])
   }
-
+  
 }

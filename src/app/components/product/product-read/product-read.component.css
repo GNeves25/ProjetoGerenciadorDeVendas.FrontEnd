@@ -1,13 +1,15 @@
 table {
   width: 100%;
+  text-align: center;
 }
 
-.edit{
-  margin-top: 10px;
-}
+th.mat-header-cell {
+text-align: center;
+ }
 
 .edit > i {
-  color: rgba(94, 94, 3, 0.768);
+  color: rgba(45, 184, 26, 0.768);
+
 }
 
 .delete {
