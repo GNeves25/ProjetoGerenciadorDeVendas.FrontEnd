@@ -2,6 +2,12 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Product } from '../product.model';
 import { ProductService } from '../product.service';
+import { EnumCategoria } from '../produt.enum.categoria';
+
+interface Categoria {
+  value: string;
+  viewValue: string;
+}
 
 @Component({
   selector: 'app-product-delete',
@@ -33,5 +39,19 @@ export class ProductDeleteComponent implements OnInit {
   cancel(): void {
     this.router.navigate(['/products'])
   }
+
+  categorias: Categoria[] = [
+    {value: EnumCategoria.Bebidas.toString(), viewValue: 'Bebidas'},
+    {value: EnumCategoria.Carnes.toString(), viewValue: 'Carnes'},
+    {value: EnumCategoria.FriosELaticinios.toString(), viewValue: 'FriosELaticinios'},
+    {value: EnumCategoria.Higiene.toString(), viewValue: 'Higiene'},
+    {value: EnumCategoria.Hortifruti.toString(), viewValue: 'Hortifruti'},
+    {value: EnumCategoria.Limpeza.toString(), viewValue: 'Limpeza'},
+    {value: EnumCategoria.Matinais.toString(), viewValue: 'Matinais'},
+    {value: EnumCategoria.Mercearia.toString(), viewValue: 'Mercearia'},
+    {value: EnumCategoria.Padaria.toString(), viewValue: 'Padaria'},
+    {value: EnumCategoria.PetShop.toString(), viewValue: 'PetShop'},
+    {value: EnumCategoria.UtilidadesDomesticas.toString(), viewValue: 'UtilidadesDomesticas'}
+  ];
 
 }

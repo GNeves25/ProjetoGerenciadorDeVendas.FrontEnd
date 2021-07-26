@@ -2,10 +2,22 @@
     <mat-card-title>Novo Produto</mat-card-title>
     <form>
         <mat-form-field>
-            <input matInput placeholder="Nome"  [(ngModel)]="produto.nome" name="nome" required/>
+            <input matInput placeholder="Nome" [(ngModel)]="produto.nome" name="nome" required />
         </mat-form-field>
         <mat-form-field>
-            <input matInput placeholder="Preço (R$)" [(ngModel)]="produto.preco" [ngModelOptions]="{standalone: true}" name="preco" required />
+            <input matInput placeholder="Quantidade" [(ngModel)]="produto.quantidade" name="quantidade" required />
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Data De Vencimento" [(ngModel)]="produto.dataDeVencimento"
+                name="dataDeVencimento" required />
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+            <mat-label>Categoria</mat-label>
+            <mat-select>
+                <mat-option *ngFor="let categoria of categorias" [value]="categoria.value" name="categoria" required>
+                    {{categoria.viewValue}}
+                </mat-option>
+            </mat-select>
         </mat-form-field>
     </form>
     <button mat-raised-button (click)="createProduct()" color="primary">Salvar</button>

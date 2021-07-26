@@ -5,7 +5,13 @@
             <input matInput placeholder="Nome" [(ngModel)]="produto.nome" name="nome" />
         </mat-form-field>
         <mat-form-field>
-            <input matInput placeholder="Preço (R$)" [(ngModel)]="produto.preco" name="preco" />
+            <input matInput placeholder="Quantidade" [(ngModel)]="produto.quantidade" name="quantidade" required/>
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Data De Vencimento"  [(ngModel)]="produto.dataDeVencimento" name="dataDeVencimento" required/>
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Categoria" [(ngModel)]="produto.categoria" name="categoria" required/>
         </mat-form-field>
     </form>
     <button mat-raised-button (click)="updateProduct()" color="primary">Salvar</button>

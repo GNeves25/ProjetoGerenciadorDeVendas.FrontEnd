@@ -1,10 +1,16 @@
 .title {
     font-size: 3rem;
-    font-weight: 300;
+    font-weight: 800;
     line-height: 1.2;
+    margin-left: 10px;
 }
 
 .subtitle {
     margin-top: 10px;
     font-size: 1.1rem;
+    margin-left: 10px;
 }
+
+mat-card{
+    background: linear-gradient(to right,
+    rgb(0, 81, 255) 0.5%, rgb(255, 255, 255) 0.2% 100%)}

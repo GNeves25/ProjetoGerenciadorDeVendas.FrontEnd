@@ -1,5 +1,9 @@
+import { EnumCategoria } from './produt.enum.categoria';
+
 export interface Product {
     id?: number,
     nome: string,
-    preco: string
+    quantidade: number,
+    dataDeVencimento: Date,
+    categoria: EnumCategoria
 }

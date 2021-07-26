@@ -5,7 +5,18 @@
             <input matInput placeholder="Nome" [value]="produto.nome" name="nome" disabled/>
         </mat-form-field>
         <mat-form-field>
-            <input matInput placeholder="Preço (R$)" [value]="produto.preco" name="preco" disabled/>
+            <input matInput placeholder="Quantidade" [value]="produto.quantidade" name="quantidade" required/>
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="DataDeVencimento" [value] = "produto.dataDeVencimento" name="dataDeVencimento" required/>
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+            <mat-label>Categoria</mat-label>
+            <mat-select>
+                <mat-option *ngFor="let categoria of categorias" [value]="produto.categoria" name="categoria" required>
+                    {{categoria.viewValue}}
+                </mat-option>
+            </mat-select>
         </mat-form-field>
     </form>
     <button mat-raised-button (click)="deleteProduct()" color="warn">Excluir</button>

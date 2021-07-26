@@ -1,10 +1,9 @@
-table {
+mat-table {
   width: 100%;
-  text-align: center;
 }
 
-th.mat-header-cell {
-text-align: center;
+.mat-header-cell {
+  text-align: right ;
  }
 
 .edit > i {
